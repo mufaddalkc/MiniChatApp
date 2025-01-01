@@ -1,0 +1,104 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif; /* Modern font */
+  background-color: #f4f4f9; /* Light background */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+/* Container for centering the form */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Heading styling */
+.form-heading {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Styling for the form */
+.chat-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form elements */
+  width: 100%;
+}
+
+/* Input fields styling */
+.input-field,
+.message-field {
+  padding: 12px;
+  border: 2px solid #ddd; /* Light border */
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+  background-color: #fafafa; /* Light background */
+  transition: border-color 0.3s ease;
+}
+
+/* Focus effect on input fields */
+.input-field:focus,
+.message-field:focus {
+  border-color: #007bff; /* Blue border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Styling for textarea (optional size adjustment) */
+.message-field {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+/* Button styling */
+.submit-button {
+  padding: 12px 20px;
+  background-color: #007bff; /* Blue background */
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-weight: bold;
+}
+
+/* Button hover effect */
+.submit-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .form-heading {
+    font-size: 20px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+  }
+}

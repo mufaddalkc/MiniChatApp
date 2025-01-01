@@ -1,0 +1,41 @@
+body {
+  margin-left: 20px;
+}
+
+.chat {
+  background-color: grey;
+  padding: 20px;
+}
+.msg {
+  background-color: black;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+p {
+  color: white;
+}
+/* Style the New Chat Button */
+.new-chat-button {
+  background-color: #000; /* Black background */
+  color: white; /* White text */
+  font-size: 16px; /* Font size */
+  padding: 12px 20px; /* Padding inside the button */
+  border: none; /* No border */
+  border-radius: 30px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  font-weight: bold; /* Bold text */
+}
+
+/* Button Hover Effect */
+.new-chat-button:hover {
+  background-color: #333; /* Dark gray when hovered */
+  transform: translateY(-3px); /* Button lifts slightly */
+}
+
+/* Button Focus Effect for accessibility */
+.new-chat-button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* White glow on focus */
+}

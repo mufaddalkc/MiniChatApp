@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Chat</title>
+    <style>
+      /* Reset some default styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif; /* Modern font */
+        background-color: #f4f4f9; /* Light background */
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #333;
+      }
+
+      /* Container for centering the form */
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+      }
+
+      /* Heading styling */
+      h3 {
+        text-align: center;
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      /* Input fields styling */
+      input[type="text"],
+      textarea {
+        padding: 12px;
+        border: 2px solid #ddd; /* Light border */
+        border-radius: 6px;
+        font-size: 16px;
+        width: 100%;
+        background-color: #fafafa; /* Light background */
+        transition: border-color 0.3s ease;
+      }
+
+      /* Focus effect on input fields */
+      input[type="text"]:focus,
+      textarea:focus {
+        border-color: #007bff; /* Blue border on focus */
+        outline: none; /* Remove default outline */
+      }
+
+      /* Styling for textarea (optional size adjustment) */
+      textarea {
+        resize: vertical; /* Allow vertical resizing */
+      }
+
+      /* Button styling (Black & Gray) */
+      button {
+        padding: 12px 20px;
+        background-color: #000; /* Black background */
+        color: white; /* White text */
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
+        width: 100%;
+        font-weight: bold;
+      }
+
+      /* Button hover effect */
+      button:hover {
+        background-color: #333; /* Dark gray background */
+        transform: translateY(-3px); /* Slight lift on hover */
+      }
+
+      /* Button focus effect */
+      button:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* White glow on focus */
+      }
+
+      /* Responsive design for mobile */
+      @media (max-width: 768px) {
+        form {
+          padding: 20px;
+        }
+
+        h3 {
+          font-size: 20px;
+        }
+
+        button {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Write New Chat</h3>
+    <form method="post" action="/chats">
+      <input type="text" placeholder="Who are you?" name="from" />
+      <textarea
+        name="message"
+        placeholder="What's on your mind?"
+        cols="30"
+        rows="10"
+      ></textarea>
+      <input type="text" placeholder="To whom?" name="to" />
+      <button>Create Chat</button>
+    </form>
+  </body>
+</html>

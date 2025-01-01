@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Your message</title>
+    <style>
+      /* Styling the button to make it black */
+      button {
+        background-color: black;
+        color: white; /* Text color inside the button */
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px; /* Optional: rounded corners */
+      }
+
+      button:hover {
+        background-color: #333; /* Darker shade of black on hover */
+      }
+
+      /* Styling the textarea */
+      textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      /* Styling the form and layout */
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      /* Styling the heading */
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Edit your message</h1>
+    <h2>Your id is <%= chat._id %></h2>
+    <p>This Message is sent from <%= chat.from %> to <%= chat.to %></p>
+    <form method="post" action="/chats/<%= chat._id %>?_method=PUT">
+      <textarea name="message" cols="20" rows="10">
+<%= chat.message %></textarea
+      >
+      <button>Update</button>
+    </form>
+  </body>
+</html>
